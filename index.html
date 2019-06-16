@@ -83,6 +83,7 @@
 				background-position: center;
 			}
 
+			/*
 			.grad-dinner-bg-mobile{
 				background-image: url('./assets/gdinner-bg-mobile.jpg');
 				background-size: contain;
@@ -90,7 +91,7 @@
 				background-position: top;
 				height: 250px; 
 				background-repeat: no-repeat; 
-			}
+			}*/
 
 			.grad-dinner-header{
 				z-index: 100;
@@ -108,15 +109,15 @@
 			<nav class="navbar w-100 position-fixed grad-dinner-header d-none d-lg-block">
 				<div class="d-flex w-100 justify-content-lg-end p-3">
 					<a href="https://www.google.com/maps/dir/UP+Department+Of+Computer+Science,+P.+Velasquez+Street,+Diliman,+Quezon+City,+Metro+Manila/Game+Over+PH,+31+Xavierville+Ave,+Quezon+City,+Metro+Manila/@14.644408,121.0577501,15z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x3397b77aa4a7149d:0x4caf37245f13f681!2m2!1d121.0684892!2d14.6486372!1m5!1m1!1s0x3397b79cc42ae651:0xad518768b5911133!2m2!1d121.0665664!2d14.6358949" target="_blank">DIRECTIONS</a>
-					<a>EVENT PAGE</a>
+					<a href="https://www.facebook.com/events/426998347884546/">EVENT PAGE</a>
 				</div>
 			</nav>
-			<div class="h-100 grad-dinner-bg">
-				<div class="position-absolute w-100 h-100 grad-dinner-bg-desktop d-none d-lg-block">
+			<img src="./assets/gdinner-bg-mobile.jpg" class="w-100 d-lg-none d-block">
+			<div class="h-100 grad-dinner-bg d-none d-lg-block">
+				<div class="position-absolute w-100 h-100 grad-dinner-bg-desktop">
 				</div>
-				<div class="position-absolute w-100 grad-dinner-bg-mobile d-block d-lg-none">
-				</div>
-				<div class="row position-absolute  d-none d-lg-flex w-100 h-100 justify-content-lg-end above">
+				
+				<div class="row position-absolute w-100 h-100 justify-content-lg-end above">
 					<div class="col-6 h-100 d-flex">
 						<div class="m-auto text-center">
 							<h4>P150 - Regular Entrance Fee</h4>
@@ -127,10 +128,46 @@
 					</div>
 				</div>
 			</div>
-			<div class="grad-dinner-forms p-4">
-				<h1>Registration</h1>
+			<div class="grad-dinner-forms py-5">
+				<div class="container">
+					<h1 class="mt-5">Registration</h1>
 
-				<p>Name, Student Number, Contact Number, E-mail, Comments, Barkada Bundle, Message to the batch, Message to the volunteers</p>
+					<div class="col-lg-6">
+						<div class="form-group">
+							<label for="name">Name *</label>
+							<input type="text" class="form-control" id="name" placeholder="Last Name, First Name, MI" required>
+						</div>
+
+						<div class="form-group">
+							<label for="student-no">Student Number *</label>
+							<input type="text" class="form-control" id="student-no" placeholder="2015-12345" required>
+						</div>
+
+						<div class="form-group">
+							<label for="contact-no">Contact Number *</label>
+							<input type="text" class="form-control" id="contact-no" placeholder="09123456789" required>
+						</div>
+
+						<div class="form-group">
+							<label for="email">E-mail *</label>
+							<input type="email" class="form-control" id="email" placeholder="jdcruz@up.edu.ph" required>
+						</div>
+
+						<div class="form-group">
+						    <label for="grad-msg">Message to the Graduating Batch</label>
+						    <textarea class="form-control" id="grad-msg" rows="3"></textarea>
+						</div>
+
+						<div class="form-group">
+						    <label for="volc-msg">Message to the volunteers</label>
+						    <textarea class="form-control" id="volc-msg" rows="3"></textarea>
+						</div>
+
+						<button type="submit" class="btn btn-primary mt-2">Submit</button>
+					</div>
+					
+
+				</div>
 			</div>
 		</div>
 
