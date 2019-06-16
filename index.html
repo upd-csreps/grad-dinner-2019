@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/ico" href="./favicon.ico">
+		<title>Game Over: Graduation Dinner X CS Party 2019</title>
+		<style>
+
+			@font-face {
+				font-family: 'Galano Grotesque';
+				src: url('./assets/galano-medium.otf')  format('opentype');
+				font-weight: normal;
+			}
+
+			@font-face {
+				font-family: 'Galano Grotesque';
+				src: url('./assets/galano-bold.otf')  format('opentype');
+				font-weight: bold;
+			}
+
+			@font-face {
+				font-family: 'Galano Grotesque';
+				src: url('./assets/galano-light.otf')  format('opentype');
+				font-weight: light;
+			}
+
+			a{
+				color: #7961af;
+				transition: 0.15s ease-in-out;
+			}
+
+			a:hover{
+				color: #e29e71;
+				text-decoration: none;
+			}
+
+			body{
+				font-family: 'Galano Grotesque';
+			}
+
+			button{
+				border-radius: 30px	!important;
+			}
+
+			.site-container{
+				height:100vh;
+			}
+
+			.above{
+				z-index: 5;
+			}
+
+			.btn-primary{
+				background-image: linear-gradient(to right, #7961af , #e29e71);
+				border-color: transparent;
+				padding: 0.5em 2em; 
+				background-color: transparent;	
+				outline: none !important;
+				box-shadow: none !important;	 
+			}
+
+			.btn-primary:hover{
+				background-image: none;
+				background-color: transparent;
+				border-color: #e29e71; 		
+				color: #e29e71; 
+			}
+
+			.btn-primary:active{
+				background-color: #7961af !important; 
+			}
+
+			.btn-primary:focus{
+				outline: none !important;
+				box-shadow: none !important;
+			}
+
+			.grad-dinner-bg-desktop{
+				background-image: url('./assets/gdinner-bg.jpg');
+				background-size: cover;
+				background-attachment: fixed;
+				background-position: center;
+			}
+
+			.grad-dinner-bg-mobile{
+				background-image: url('./assets/gdinner-bg-mobile.jpg');
+				background-size: contain;
+				background-attachment: fixed;
+				background-position: top;
+				height: 250px; 
+				background-repeat: no-repeat; 
+			}
+
+			.grad-dinner-header{
+				z-index: 100;
+			}
+
+			.grad-dinner-header a{
+				padding: 1em;  	 
+			}
+
+			
+		</style>
+	</head>
+	<body>
+		<div class="site-container">
+			<nav class="navbar w-100 position-fixed grad-dinner-header d-none d-lg-block">
+				<div class="d-flex w-100 justify-content-lg-end p-3">
+					<a href="https://www.google.com/maps/dir/UP+Department+Of+Computer+Science,+P.+Velasquez+Street,+Diliman,+Quezon+City,+Metro+Manila/Game+Over+PH,+31+Xavierville+Ave,+Quezon+City,+Metro+Manila/@14.644408,121.0577501,15z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x3397b77aa4a7149d:0x4caf37245f13f681!2m2!1d121.0684892!2d14.6486372!1m5!1m1!1s0x3397b79cc42ae651:0xad518768b5911133!2m2!1d121.0665664!2d14.6358949" target="_blank">DIRECTIONS</a>
+					<a>EVENT PAGE</a>
+				</div>
+			</nav>
+			<div class="h-100 grad-dinner-bg">
+				<div class="position-absolute w-100 h-100 grad-dinner-bg-desktop d-none d-lg-block">
+				</div>
+				<div class="position-absolute w-100 grad-dinner-bg-mobile d-block d-lg-none">
+				</div>
+				<div class="row position-absolute  d-none d-lg-flex w-100 h-100 justify-content-lg-end above">
+					<div class="col-6 h-100 d-flex">
+						<div class="m-auto text-center">
+							<h4>P150 - Regular Entrance Fee</h4>
+							<h4>P200 - Walk-ins</h4>
+							<h4>P650 - Barkada Bundle</h4>
+							<button type="button" class="btn btn-primary btn-lg font-weight-bold reg-button mt-4">REGISTER</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="grad-dinner-forms p-4">
+				<h1>Registration</h1>
+
+				<p>Name, Student Number, Contact Number, E-mail, Comments, Barkada Bundle, Message to the batch, Message to the volunteers</p>
+			</div>
+		</div>
+
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+		<script>
+			$('.reg-button').click(function(){
+			    $("html, body").animate({ scrollTop: $(".grad-dinner-bg").outerHeight() }, 600);
+			    return false;
+			});
+		</script>
+	</body>
+</html>
